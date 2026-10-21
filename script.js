@@ -1,6 +1,3 @@
-Here is your complete, updated `script.js` file. It incorporates a **multi-dimensional question database** that properly checks all three dropdown selections (**Year**, **Paper**, and **Topic**) so that it displays the exact question matching what the user picked!
-
-```javascript
 // Wait for DOM content to load fully before running scripts
 document.addEventListener("DOMContentLoaded", () => {
 
