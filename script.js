@@ -306,8 +306,101 @@ document.addEventListener("DOMContentLoaded", () => {
   const practicalBtn = document.getElementById("practical-btn");
   const notesDisplayZone = document.querySelector(".notes-display-zone");
 
-  const notesDatabase = {
-    "cell-structure": `<h3 style="color:#A9DFBF; margin-top:0;">Cell Structure Notes</h3><p style="color:#E2ECE9;">Mitochondria have double membranes and cristae.</p>`
+const notesDatabase = {
+    "cell-structure": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 1: Cell Structure & Ultrastructure</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Mitochondria:</strong> Double membrane; inner membrane folded into cristae; site of aerobic respiration & ATP synthesis.<br>
+        • <strong>Chloroplasts:</strong> Thylakoid membranes stacked into grana inside a stroma; site of photosynthesis.<br>
+        • <strong>Ribosomes:</strong> 80S in eukaryotic cytoplasm/RER; 70S in prokaryotes, mitochondria, and chloroplasts.<br>
+        • <strong>Resolution vs Magnification:</strong> Resolution is the ability to distinguish between two separate points; magnification is how many times larger an image is compared to the object.
+      </p>
+    `,
+    "biological-molecules": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 2: Biological Molecules</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Carbohydrates:</strong> Monosaccharides joined by glycosidic bonds via condensation reactions. Alpha-glucose forms helical starch/glycogen; beta-glucose forms straight cellulose microfibrils.<br>
+        • <strong>Proteins:</strong> Four structural levels: Primary (peptide bonds), Secondary (alpha-helix/beta-sheet via hydrogen bonds), Tertiary (ionic/disulfide bonds), and Quaternary (multiple polypeptide chains).<br>
+        • <strong>Lipids:</strong> Triglycerides consist of glycerol ester-bonded to three fatty acids; phospholipids contain a polar hydrophilic head and hydrophobic tails.
+      </p>
+    `,
+    "enzymes": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 3: Enzymes & Kinetics</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Mechanism:</strong> Biological catalysts that lower activation energy by forming temporary enzyme-substrate complexes.<br>
+        • <strong>Competitive Inhibitors:</strong> Similar shape to substrate; bind to the active site; can be overcome by increasing substrate concentration ($V_{max}$ remains unchanged, $K_m$ increases).<br>
+        • <strong>Non-Competitive Inhibitors:</strong> Bind to the allosteric site, altering active site shape; cannot be overcome by extra substrate ($V_{max}$ decreases).
+      </p>
+    `,
+    "cell-membranes": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 4: Cell Membranes & Transport</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Fluid Mosaic Model:</strong> Phospholipid bilayer with fluid movement and interspersed proteins, glycoproteins, and cholesterol (which regulates membrane fluidity).<br>
+        • <strong>Passive Transport:</strong> Diffusion and facilitated diffusion (down concentration gradient, no metabolic energy required).<br>
+        • <strong>Active Transport:</strong> Movement against concentration gradient using carrier proteins and ATP.
+      </p>
+    `,
+    "mitotic-cell-cycle": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 5: Mitotic Cell Cycle</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Interphase:</strong> Consists of G1 (growth), S phase (DNA replication), and G2 (preparation for division).<br>
+        • <strong>Mitosis Phases:</strong> Prophase (chromosomes condense), Metaphase (chromosomes align at equator), Anaphase (sister chromatids pull apart), Telophase (nuclear envelopes reform).<br>
+        • <strong>Significance:</strong> Produces genetically identical diploid cells for growth, tissue repair, and asexual reproduction.
+      </p>
+    `,
+    "protein-synthesis": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 6: Protein Synthesis</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Transcription:</strong> DNA unwinds; RNA polymerase synthesizes pre-mRNA using complementary base pairing in the nucleus.<br>
+        • <strong>Splicing:</strong> Introns are removed and exons are joined to form mature mRNA.<br>
+        • <strong>Translation:</strong> mRNA attaches to a ribosome; tRNA anticodons match codons to assemble amino acid chains into polypeptides.
+      </p>
+    `,
+    "plant-transport": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 7: Plant Transport</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Xylem:</strong> Transports water and mineral ions dead cells, lignified walls, driven by transpiration pull (cohesion-tension theory).<br>
+        • <strong>Phloem:</strong> Transports assimilates (sucrose/amino acids) through sieve tube elements via mass flow hypothesis (source to sink).<br>
+        • <strong>Stomatal Opening:</strong> Active transport of $H^+$ ions and influx of $K^+$ ions lowers water potential, causing guard cells to become turgid and open.
+      </p>
+    `,
+    "human-transport": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 8: Human Transport</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Cardiac Cycle:</strong> Coordinated by the sinoatrial node (SAN), atrioventricular node (AVN), and Purkyne tissue.<br>
+        • <strong>Blood Vessels:</strong> Arteries have thick elastic walls to withstand high pressure; capillaries are one-cell thick for rapid exchange; veins have valves to prevent backflow.<br>
+        • <strong>Bohr Effect:</strong> High carbon dioxide partial pressure lowers blood pH, causing haemoglobin to unload oxygen more readily to respiring tissues.
+      </p>
+    `,
+    "gas-exchange": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 9: Gas Exchange</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Alveolar Adaptations:</strong> Extremely thin squamous epithelium, large surface area, rich capillary network, and surfactant secretion to maintain a steep concentration gradient.<br>
+        • <strong>Smoking Pathophysiology:</strong> Tar paralyzes cilia, mucus accumulates (chronic bronchitis), and alveolar walls break down, reducing surface area (emphysema).
+      </p>
+    `,
+    "infectious-diseases": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 10: Infectious Diseases</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Pathogens:</strong> Transmitted via water (Cholera), vectors (Malaria via female Anopheles mosquitoes), or droplets (Tuberculosis).<br>
+        • <strong>Antibiotics:</strong> Target bacterial metabolic processes (like peptidoglycan cross-linking in cell walls via penicillin) but are completely ineffective against viral protein coats.
+      </p>
+    `,
+    "immune-system": `
+      <h3 style="color:#A9DFBF; mathematical-notation; margin-top:0;">Chapter 11: Immune System</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Phagocytosis:</strong> Macrophages engulf pathogens into phagosomes, fuse with lysosomes, and present antigens on their surface.<br>
+        • <strong>Adaptive Immunity:</strong> T-helper cells activate B-lymphocytes, which undergo clonal expansion to differentiate into plasma cells producing antibodies and memory cells.
+      </p>
+    `,
+    "Respiration": `
+      <h3 style="color:#A9DFBF; margin-top:0;">Chapter 12: Respiration</h3>
+      <p style="color:#E2ECE9; font-size: 14px; line-height: 1.6;">
+        • <strong>Glycolysis:</strong> Occurs in cytoplasm; glucose phosphorylated, split into triose phosphate, and yields a net gain of 2 ATP and 2 reduced NAD.<br>
+        • <strong>Krebs Cycle:</strong> Occurs in mitochondrial matrix; produces reduced coenzymes and releases carbon dioxide.<br>
+        • <strong>Oxidative Phosphorylation:</strong> Occurs on cristae via chemiosmosis, generating the vast majority of ATP through ATP synthase.
+      </p>
+    `
   };
 
   if (notesTopicSelect) {
