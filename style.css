@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com');
+
+
+html, body {
+margin: 0;
+padding: 0;
+width: 100%;
+background: #3A4D39;
+background: linear-gradient(135deg, #1E271E 0%, #3A4D39 60%, #739072 100%);
+}
+.navbar {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: #151C15;
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-links {
+  display: flex;
+align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 40px;
+}
+  .nav-links a{
+  text-decoration: none;
+  color: #E2ECE9; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+  color: #A9DFBF; 
+}
+h1 {
+text-decoration: none;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-weight: 600;
+  font-size: 50px;
+text-align: center;
+transition: color 0.3s ease;
+
+}
+h2 {
+text-decoration: none;
+font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+text-decoration: none;
+  text-align: center;
+}
+.features-grid {
+ flex: 1;
+  background: rgba(21, 28, 21, 0.5); 
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(115, 144, 114, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+}
+.feature-card:hover {
+  border-color: rgba(82, 179, 107, 0.5); 
+}
+
+.feature-card .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.feature-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #9EB29D;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.page-content {
+  display: none;
+}
+
+.page-content.active-page {
+  display: block;
+}
+
+
+
+.majors-grid {
+ flex: 1;
+  background: rgba(21, 28, 21, 0.5); 
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(115, 144, 114, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+
+.major-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.major-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.major-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #9EB29D;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}.workspace-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.question-panel, .ai-tutor-panel {
+  flex: 1;
+  min-width: 320px; 
+  background: rgba(21, 28, 21, 0.4);
+  border: 1px solid rgba(115, 144, 114, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+
+.display-box {
+  background-color: #151C15;
+  border: 1px solid rgba(115, 144, 114, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 180px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.ai-output {
+  border-color: rgba(169, 223, 191, 0.3);
+  min-height: 220px;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #A9DFBF;
+}
+
+textarea {
+  background-color: #151C15;
+  color: #E2ECE9;
+  border: 1px solid rgba(115, 144, 114, 0.4);
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  min-height: 100px;
+  resize: vertical;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #82B36B;
+}

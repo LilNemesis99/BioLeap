@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>BioLeap</title>
+  </head>
+  <body>
+  <div><nav class="navbar">
+<ul class="nav-links">
+  <li><a href="#past-papers" class="active">Past Paper Questions</a></li>
+  <li><a href="#topical-revision-notes">Topical Revision Notes</a></li>
+  <li><a href="#Uni-advice">Biology-Majors</a></li>
+</ul>
+</nav>
+
+  
+<div id="home-page" class="page-content active-page">
+    <div><h1>Welcome!</h1>
+      <h2> to the only revision resource you will <strong>need.</strong></h2>
+  <p>Topical revision notes, AI tutor and much more!</p></div>
+
+<section class="features-grid">
+<div class="feature-card">
+<div class="icon">🎯</div>
+<h3>Topic Focused Revision</h3>
+<p>Filter questions by topics and transform your weak points into your strong points.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">🤖</div>
+<h3>Trained AI Tutor</h3>
+<p>We trained Gemini 2.0 with over 5 years' worth of past papers, mark schemes, and examiner reports.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">📈</div>
+  <h3>Granulated Feedback</h3>
+  <p> Don't just get a score. See exactly where you went wrong, and precisely how to fix it.</p>
+</div>
+</section>
+</div>
+    
+    <div id="past-papers" class="page-content active-page">
+      <h2>Past Paper Questions</h2>
+      <p>Use the buttons below to apply filters to tailor your studying experience!</p>
+      
+      <div class="filter-bar">
+        
+      <div class="filter-group">
+        <label for="year-select">Year:</label>
+        <select id="year-select" name="year">
+          <option value="">-- Choose Year --</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+        </select>
+      </div>
+    <div class="filter-group">
+        <label for="paper-select">Paper:</label>
+        <select id="paper-select" name="paper">
+          <option value="">-- Choose Paper --</option>
+          <option value="p1">Paper 1</option>
+          <option value="p2">Paper 2</option>
+          <option value="p4">Paper 4</option>
+   </select>
+      </div>
+
+    <div class="filter-group">
+          <label for="topic-select">Topic:</label>
+        <select id="topic-select" name="topic">
+          <option value="">------------- Choose Topic -----------</option>
+          <option value="cell-structure">1. Cell Structure</option>
+          <option value="biological-molecules">2. Biological Molecules</option>
+          <option value="enzymes">3. Enzymes</option>
+          <option value="cell-membranes">4. Cell Membranes and Transport</option>
+          <option value="mitotic-cell-cycle">5.  Mitotic Cell Cycle</option>
+          <option value="protein-synthesis">
+            6.   Protein Synthesis</option>
+          <option value="plant-transport">7.  Plant Transport</option>
+          <option value="human-transport">8. Human Transport</option>
+          <option value="gas-exchange">9. Gas Exchange</option>
+          <option value="infectious-diseases">10. Infectious Diseases</option>
+          <option value="immune-system">11. Immune System</option>
+          <option value="Respiration">12. Respiration</option>
+        </select>
+      </div>
+    </div>
+  
+
+<div class="workspace-container">
+  
+ 
+  <div class="question-panel">
+    <h3>Selected Past Paper Question</h3>
+    <div id="active-question-box" class="display-box">
+      <p style="color: #9EB29D; font-style: italic;">Select your filters above to load an official CAIE Biology question...</p>
+    </div>
+  </div>
+
+
+  <div class="ai-tutor-panel">
+    <h3>🤖 Gemini 2.0 AI Tutor Workspace</h3>
+    
+
+    <div class="input-group">
+      <label for="student-answer-input">Type your working out or final answer below:</label>
+      <textarea id="student-answer-input" placeholder="Explain your biological reasoning here "></textarea>
+    </div>
+
+
+    <button id="ask-ai-btn" class="special-action-btn" style="width: 100%; margin: 15px 0;">
+      ✨ Analyze Answer with AI Tutor
+    </button>
+
+    <!-- AI Diagnostic Output Box -->
+    <label>Granulated Feedback Output:</label>
+    <div id="ai-response-box" class="display-box ai-output">
+      <p style="color: #9EB29D; font-style: italic;">Your detailed marking scheme feedback and diagnostic metrics will generate here...</p>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+    
+<div id="topical-revision-notes" class="page-content active-page">
+  <h2>Topical Revision Notes</h2>
+  <p>Select a theoretical topic or jump straight into laboratory practical guidelines.</p>
+
+
+  <div class="notes-filter-bar">
+    
+ 
+    <div class="filter-group">
+      <label for="notes-topic-select">Theory Topic:</label>
+      <select id="notes-topic-select" name="notes-topic">
+        <option value="">-- Choose Chapter --</option>
+        <option value="cell-structure">1. Cell Structure</option>
+        <option value="biological-molecules">2. Biological Molecules</option>
+        <option value="enzymes">3. Enzymes</option>
+        <option value="cell-membranes">4. Cell Membranes and Transport</option>
+          <option value="mitotic-cell-cycle">5.  Mitotic Cell Cycle</option>
+          <option value="protein-synthesis">
+            6.   Protein Synthesis</option>
+          <option value="plant-transport">7.  Plant Transport</option>
+          <option value="human-transport">8. Human Transport</option>
+          <option value="gas-exchange">9. Gas Exchange</option>
+          <option value="infectious-diseases">10. Infectious Diseases</option>
+          <option value="immune-system">11. Immune System</option>
+          <option value="Respiration">12. Respiration</option>
+      </select>
+    </div>
+
+
+    <div class="practical-group">
+      <button id="practical-btn" class="special-action-btn">
+        🔬 View Paper 3 Practical Guide
+      </button>
+    </div>
+
+  </div> 
+
+
+  <div class="notes-display-zone">
+    <p style="color: #9EB29D; font-style: italic; margin-top: 40px;">
+      Choose a topic or click the practical guide to load study materials...
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="Uni-advice" class="page-content active-page">
+  <h2>Picking the Right Major</h2>
+  <p>Explore specialized branches of biological science to find your future career path.</p>
+
+
+  <div class="majors-grid">
+
+
+    <div class="major-card">
+      <div class="major-icon">🧬</div>
+      <h3>Biotechnology</h3>
+      <p class="major-desc">Using living organisms and biological systems to create products, drugs, and genetic modifications.</p>
+      <div class="major-meta"><strong>Careers:</strong> Pharma Scientist, Geneticist</div>
+    </div>
+
+    
+    <div class="major-card">
+      <div class="major-icon">💻</div>
+      <h3>Bioinformatics</h3>
+      <p class="major-desc">Merging biology data with computer science. Building software algorithms to map DNA sequences.</p>
+      <div class="major-meta"><strong>Careers:</strong> Data Analyst, Genomic Engineer</div>
+    </div>
+
+    
+    <div class="major-card">
+      <div class="major-icon">🦾</div>
+      <h3>Bioengineering</h3>
+      <p class="major-desc">Applying engineering principles to biological systems to design medical devices and artificial organs.</p>
+      <div class="major-meta"><strong>Careers:</strong> Biomedical Engineer, Prosthetic Designer</div>
+    </div>
+
+   
+    <div class="major-card">
+      <div class="major-icon">🧪</div>
+      <h3>Biochemistry</h3>
+      <p class="major-desc"> Discovering and manipulating molecular chemical reactions within cells to understand health, engineer new medicines, and unlock how life works.</p>
+      <div class="major-meta"><strong>Careers:</strong> Embryologist, Medicinal Chemist</div>
+    </div>
+
+  </div> 
+</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
