@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ==========================================
   // 2. MULTI-DIMENSIONAL PAST PAPER DATABASE
-  // (Organized by Year -> Paper -> Topic)
   // ==========================================
   const yearSelect = document.getElementById("year-select");
   const paperSelect = document.getElementById("paper-select");
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "p2": {
         "cell-structure": "<strong>[9700/21/M/J/24 - Q1 (3 Marks)]</strong> Outline three structural differences between eukaryotic and prokaryotic cells, making specific reference to membrane-bound organelles, cell wall composition, and ribosomal subunits.",
         "biological-molecules": "<strong>[9700/21/M/J/24 - Q2 (4 Marks)]</strong> Describe how the structure of a collagen molecule relates to its high tensile strength in animal extracellular matrices.",
-        "enzymes": "<strong>[9700/22/M/J/24 - Q3 (4 Marks)]</strong> Explain how competitive and non-competitive inhibitors affect the maximum rate of reaction ($V_{max}$) and affinity ($K_m$) of an enzyme.",
+        "enzymes": "<strong>[9700/22/M/J/24 - Q3 (4 Marks)]</strong> Explain how competitive and non-competitive inhibitors affect the maximum rate of reaction (Vmax) and affinity (Km) of an enzyme.",
         "cell-membranes": "<strong>[9700/21/M/J/24 - Q4 (4 Marks)]</strong> Describe the process of facilitated diffusion across a cell surface membrane and explain why it is classified as a passive transport mechanism.",
         "mitotic-cell-cycle": "<strong>[9700/22/M/J/24 - Q2 (3 Marks)]</strong> Describe the behaviour of chromosomes during metaphase and anaphase of mitosis, referencing spindle fibres and centromere splitting.",
         "protein-synthesis": "<strong>[9700/21/M/J/24 - Q3 (4 Marks)]</strong> Outline the role of RNA polymerase and complementary base pairing during the transcription stage of protein synthesis.",
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "cell-membranes": "<strong>[9700/42/M/J/24 - Q4 (5 Marks)]</strong> Explain the role of cell surface receptors and signal transduction pathways across plasma membranes.",
         "mitotic-cell-cycle": "<strong>[9700/41/M/J/24 - Q5 (6 Marks)]</strong> Describe how mutations in proto-oncogenes and tumour suppressor genes can lead to uncontrolled cell division (cancer).",
         "protein-synthesis": "<strong>[9700/42/M/J/24 - Q1 (5 Marks)]</strong> Explain how post-transcriptional modification of pre-mRNA produces mature mRNA in eukaryotic cells.",
-        "plant-transport": "<strong>[9700/41/M/J/24 - Q2 (4 Marks)]</strong> Explain how protons ($H^+$ ions) and potassium ions ($K^+$) are transported across guard cell membranes to open stomata.",
+        "plant-transport": "<strong>[9700/41/M/J/24 - Q2 (4 Marks)]</strong> Explain how protons (H+ ions) and potassium ions (K+) are transported across guard cell membranes to open stomata.",
         "human-transport": "<strong>[9700/42/M/J/24 - Q3 (5 Marks)]</strong> Explain the Bohr effect and how it facilitates oxygen dissociation in actively respiring tissues.",
         "gas-exchange": "<strong>[9700/41/M/J/24 - Q4 (5 Marks)]</strong> Describe the pathophysiology of chronic bronchitis and emphysema in relation to smoking and gas exchange surfaces.",
         "infectious-diseases": "<strong>[9700/42/M/J/24 - Q5 (6 Marks)]</strong> Discuss the global control and eradication strategies used for infectious diseases such as malaria and tuberculosis.",
@@ -84,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedPaper = paperSelect ? paperSelect.value : "";
     const selectedTopic = topicSelect ? topicSelect.value : "";
 
-    // Check if all three filters are chosen
     if (selectedYear && selectedPaper && selectedTopic) {
       const yearObj = pastPaperDatabase[selectedYear];
       if (yearObj && yearObj[selectedPaper] && yearObj[selectedPaper][selectedTopic]) {
@@ -99,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Fallback prompt guidance if any filter is missing
     if (selectedYear || selectedPaper || selectedTopic) {
       activeQuestionBox.innerHTML = `
         <p style="color: #A9DFBF; font-style: italic;">
@@ -124,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const studentAnswerInput = document.getElementById("student-answer-input");
   const aiResponseBox = document.getElementById("ai-response-box");
 
-  const API_KEY = ""; // Insert your key if testing live API calls
+  const API_KEY = ""; 
 
   if (askAiBtn) {
     askAiBtn.addEventListener("click", async () => {
@@ -272,12 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <li><strong>1. Biological Drawings:</strong> Use sharp pencil, continuous lines, no shading.</li>
           <li><strong>2. Variables:</strong> Independent, Dependent, and Controlled with exact units.</li>
           <li><strong>3. Serial Dilutions:</strong> Proportional volume transfers for concentration steps.</li>
-          <li><strong>4. Magnification:</strong> $M = \\frac{I}{A}$ (Ensure units match before calculating!).</li>
+          <li><strong>4. Magnification:</strong> M = I / A (Ensure units match before calculating!).</li>
         </ul>
       `;
     });
   }
-});
-});
 
-```
+});
